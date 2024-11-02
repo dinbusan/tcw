@@ -6,8 +6,8 @@
 
     <header class="shadow-sm bg-white">
       <nav class="container mx-auto p-4">
-        <NuxtLink class="font-bold" to="/products"
-          >Tom Cleerdin Works Products</NuxtLink
+        <NuxtLink class="font-bold" to="/"
+          >Tom Cleerdin Works | Products</NuxtLink
         >
       </nav>
     </header>
@@ -20,6 +20,7 @@
         <li><NuxtLink to="/">Home</NuxtLink></li>
         <li><NuxtLink to="/about">About</NuxtLink></li>
         <li><NuxtLink to="/products">Products</NuxtLink></li>
+        <li><NuxtLink to="/contact">Contact</NuxtLink></li>
       </ul>
     </footer>
   </div>

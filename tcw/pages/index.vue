@@ -12,6 +12,10 @@
       placeat hic. Aspernatur quibusdam ratione iusto eius sequi? Alias sunt
       praesentium minus.
     </p>
+    <h1 class="text-4xl font-bold">This is a heading 1</h1>
+    <h2 class="text-3xl font-semibold">This is a heading 2</h2>
+    <h3 class="text-2xl font-medium">This is a heading 3</h3>
+    <p class="text-base">This is a paragraph.</p>
   </div>
 </template>
 
