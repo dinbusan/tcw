@@ -1,11 +1,13 @@
 <template>
   <div>
     <header
-      class="bg-prussian-blue sm:flex sm:items-center sm:justify-between sm:px-4 sm:py-3"
+      id="navbar"
+      :class="{ onScroll: !topOfPage }"
+      class="bg-transparent hover:bg-prussian-blue ease-in-out duration-300 sm:flex sm:items-center sm:justify-between sm:px-4 sm:py-2 fixed top-0 right-0 left-0"
     >
       <div class="flex items-center justify-between px-4 py-3 sm:p-0">
         <div>
-          <NuxtLink class="text-xanthous font-bold" to="/"
+          <NuxtLink class="text-change text-xanthous font-bold" to="/"
             >Tom Cleerdin Works</NuxtLink
           >
         </div>
@@ -37,7 +39,7 @@
           'pb-4',
         ]"
       >
-        <ul class="sm:flex">
+        <ul class="sm:flex text-change">
           <li
             @click="toggleMenu"
             class="rounded px-2 py-1 hover:text-orange-wheel"
@@ -66,7 +68,7 @@
             @click="toggleMenu"
             class="rounded px-2 py-1 mt-1 sm:mt-0 sm:ml-2"
           >
-            <NuxtLink class="btn" to="/contact">Contact</NuxtLink>
+            <NuxtLink class="" to="/contact">Contact</NuxtLink>
           </li>
           <!-- <li
             @click="toggleMenu"
@@ -85,17 +87,40 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { ref, onMounted, onUnmounted } from "vue";
 
 const isOpen = ref(false);
+const topOfPage = ref(true);
 
 const toggleMenu = () => {
   isOpen.value = !isOpen.value;
 };
+
+const handleScroll = () => {
+  topOfPage.value = window.scrollY === 0;
+};
+
+onMounted(() => {
+  window.addEventListener("scroll", handleScroll);
+});
+
+onUnmounted(() => {
+  window.removeEventListener("scroll", handleScroll);
+});
 </script>
 
 <style scoped>
-.router-link-exact-active {
+/* .router-link-exact-active {
   color: var(--orange-wheel);
+} */
+
+.onScroll {
+  background-color: var(--prussian-blue);
+  transition: background-color 0.3s ease-in-out;
+}
+
+#navbar:hover .text-change,
+.onScroll .text-change {
+  color: white !important;
 }
 </style>
