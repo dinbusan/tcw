@@ -2,7 +2,7 @@
   <Head>
     <Title>TCW | About</Title>
   </Head>
-  <div>
+  <div class="container p-4 mx-auto">
     <h2>About</h2>
     <p>
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, eveniet!
