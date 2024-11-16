@@ -4,7 +4,7 @@
       <Title>TCW | Products</Title>
     </Head>
 
-    <header class="shadow-sm bg-white">
+    <header class="sm:flex sm:items-center sm:justify-between sm:px-4 sm:py-3">
       <nav class="container mx-auto p-4">
         <NuxtLink class="font-bold" to="/"
           >Tom Cleerdin Works | Products</NuxtLink
