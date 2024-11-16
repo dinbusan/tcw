@@ -8,7 +8,16 @@ export default {
     "./assets/**/*.{vue,js,ts,jsx,tsx}", // If you have any other relevant directories
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        "prussian-blue": "var(--prussian-blue)",
+        "fire-engine-red": "var(--fire-engine-red)",
+        "orange-wheel": "var(--orange-wheel)",
+        xanthous: "var(--xanthous)",
+        vanilla: "var(--vanilla)",
+        "custom-green": "(--custom-green)",
+      },
+    },
   },
   plugins: [],
 };

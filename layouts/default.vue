@@ -1,21 +1,17 @@
 <template>
   <div>
     <header
-      class="bg-gray-900 sm:flex sm:items-center sm:justify-between sm:px-4 sm:py-3"
+      class="bg-prussian-blue sm:flex sm:items-center sm:justify-between sm:px-4 sm:py-3"
     >
       <div class="flex items-center justify-between px-4 py-3 sm:p-0">
         <div>
-          <NuxtLink class="text-gray-200 font-bold" to="/"
+          <NuxtLink class="text-xanthous font-bold" to="/"
             >Tom Cleerdin Works</NuxtLink
           >
         </div>
 
         <div class="sm:hidden">
-          <button
-            @click="toggleMenu"
-            type="button"
-            class="text-gray-500 focus:text-white focus:outline-none hover:text-white"
-          >
+          <button @click="toggleMenu" type="button" class="text-xanthous">
             <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
               <path
                 v-if="isOpen"
@@ -35,40 +31,49 @@
         :class="[
           isOpen ? 'block' : 'hidden',
           'sm:flex',
-          'text-white',
+          'text-xanthous',
           'px-2',
           'pt-2',
           'pb-4',
         ]"
       >
         <ul class="sm:flex">
-          <li @click="toggleMenu" class="rounded px-2 py-1 hover:bg-gray-300">
+          <li
+            @click="toggleMenu"
+            class="rounded px-2 py-1 hover:text-orange-wheel"
+          >
             <NuxtLink to="/">Home</NuxtLink>
           </li>
           <li
             @click="toggleMenu"
-            class="rounded px-2 py-1 mt-1 sm:mt-0 sm:ml-2 hover:bg-gray-300"
+            class="rounded px-2 py-1 mt-1 sm:mt-0 sm:ml-2 hover:text-orange-wheel"
           >
             <NuxtLink to="/about">About</NuxtLink>
           </li>
           <li
             @click="toggleMenu"
-            class="rounded px-2 py-1 mt-1 sm:mt-0 sm:ml-2 hover:bg-gray-300"
+            class="rounded px-2 py-1 mt-1 sm:mt-0 sm:ml-2 hover:text-orange-wheel"
+          >
+            <NuxtLink class="" to="/portfolio">Portfolio</NuxtLink>
+          </li>
+          <li
+            @click="toggleMenu"
+            class="rounded px-2 py-1 mt-1 sm:mt-0 sm:ml-2 hover:text-orange-wheel"
           >
             <NuxtLink class="" to="/products">Products</NuxtLink>
           </li>
           <li
             @click="toggleMenu"
-            class="rounded px-2 py-1 mt-1 sm:mt-0 sm:ml-2 hover:bg-gray-300"
+            class="rounded px-2 py-1 mt-1 sm:mt-0 sm:ml-2"
           >
             <NuxtLink class="btn" to="/contact">Contact</NuxtLink>
           </li>
-          <li
+          <!-- <li
             @click="toggleMenu"
-            class="rounded px-2 py-1 mt-1 sm:mt-0 sm:ml-2 hover:bg-gray-300"
+            class="rounded px-2 py-1 mt-1 sm:mt-0 sm:ml-2 hover:text-orange-wheel"
           >
             <NuxtLink class="btn" to="/products/lkhasdfjsd">oops</NuxtLink>
-          </li>
+          </li> -->
         </ul>
       </nav>
     </header>
@@ -91,6 +96,6 @@ const toggleMenu = () => {
 
 <style scoped>
 .router-link-exact-active {
-  color: #12b488;
+  color: var(--orange-wheel);
 }
 </style>
