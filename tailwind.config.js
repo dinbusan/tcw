@@ -16,6 +16,14 @@ export default {
         xanthous: "var(--xanthous)",
         vanilla: "var(--vanilla)",
         "custom-green": "(--custom-green)",
+        black: "var(--black)",
+        "aerospace-orange": "var(--aerospace-orange)",
+        gold: "var(--gold)",
+        snow: "var(--snow)",
+      },
+      fontFamily: {
+        display: ["Orbitron", "sans-serif"], // Add a "display" font utility
+        bodyFont: ["Poppins", "sans-serif"],
       },
     },
   },

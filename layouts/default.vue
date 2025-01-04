@@ -3,17 +3,19 @@
     <header
       id="navbar"
       :class="{ onScroll: !topOfPage }"
-      class="bg-transparent hover:bg-prussian-blue ease-in-out duration-300 sm:flex sm:items-center sm:justify-between sm:px-4 sm:py-2 fixed top-0 right-0 left-0"
+      class="bg-transparent text-lg z-50 hover:bg-black ease-in-out duration-300 sm:flex sm:items-center sm:justify-between sm:px-4 sm:py-2 fixed top-0 right-0 left-0"
     >
       <div class="flex items-center justify-between px-4 py-3 sm:p-0">
         <div>
-          <NuxtLink class="text-change text-xanthous font-bold" to="/"
-            >Tom Cleerdin Works</NuxtLink
+          <NuxtLink
+            class="text-change icon-display text-aerospace-orange font-bold"
+            to="/"
+            >TCW</NuxtLink
           >
         </div>
 
         <div class="sm:hidden">
-          <button @click="toggleMenu" type="button" class="text-xanthous">
+          <button @click="toggleMenu" type="button" class="text-snow">
             <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
               <path
                 v-if="isOpen"
@@ -33,7 +35,7 @@
         :class="[
           isOpen ? 'block' : 'hidden',
           'sm:flex',
-          'text-xanthous',
+          'text-snow',
           'px-2',
           'pt-2',
           'pb-4',
@@ -42,37 +44,37 @@
         <ul class="sm:flex text-change">
           <li
             @click="toggleMenu"
-            class="rounded px-2 py-1 hover:text-orange-wheel"
+            class="rounded px-2 py-1 hover:text-aerospace-orange"
           >
             <NuxtLink to="/">Home</NuxtLink>
           </li>
           <li
             @click="toggleMenu"
-            class="rounded px-2 py-1 mt-1 sm:mt-0 sm:ml-2 hover:text-orange-wheel"
+            class="rounded px-2 py-1 mt-1 sm:mt-0 sm:ml-2 hover:text-aerospace-orange"
           >
             <NuxtLink to="/about">About</NuxtLink>
           </li>
           <li
             @click="toggleMenu"
-            class="rounded px-2 py-1 mt-1 sm:mt-0 sm:ml-2 hover:text-orange-wheel"
+            class="rounded px-2 py-1 mt-1 sm:mt-0 sm:ml-2 hover:text-aerospace-orange"
           >
             <NuxtLink class="" to="/portfolio">Portfolio</NuxtLink>
           </li>
           <li
             @click="toggleMenu"
-            class="rounded px-2 py-1 mt-1 sm:mt-0 sm:ml-2 hover:text-orange-wheel"
+            class="rounded px-2 py-1 mt-1 sm:mt-0 sm:ml-2 hover:text-aerospace-orange"
           >
             <NuxtLink class="" to="/products">Products</NuxtLink>
           </li>
           <li
             @click="toggleMenu"
-            class="rounded px-2 py-1 mt-1 sm:mt-0 sm:ml-2"
+            class="rounded px-2 py-1 mt-1 sm:mt-0 sm:ml-2 hover:text-aerospace-orange"
           >
             <NuxtLink class="" to="/contact">Contact</NuxtLink>
           </li>
           <!-- <li
             @click="toggleMenu"
-            class="rounded px-2 py-1 mt-1 sm:mt-0 sm:ml-2 hover:text-orange-wheel"
+            class="rounded px-2 py-1 mt-1 sm:mt-0 sm:ml-2 hover:text-aerospace-orange"
           >
             <NuxtLink class="btn" to="/products/lkhasdfjsd">oops</NuxtLink>
           </li> -->
@@ -111,16 +113,17 @@ onUnmounted(() => {
 
 <style scoped>
 /* .router-link-exact-active {
-  color: var(--orange-wheel);
+  color: var(--aerospace-orange);
 } */
 
 .onScroll {
-  background-color: var(--prussian-blue);
+  background-color: var(--black);
   transition: background-color 0.3s ease-in-out;
 }
 
 #navbar:hover .text-change,
 .onScroll .text-change {
-  color: white !important;
+  color: snow !important;
+  transition: 0.3s ease-in-out;
 }
 </style>
