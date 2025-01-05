@@ -63,7 +63,11 @@
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+definePageMeta({
+  layout: "home",
+});
+</script>
 
 <style scoped>
 .bg-tom {

@@ -26,6 +26,9 @@ export default defineNuxtConfig({
       ],
     },
   },
+  vite: {
+    assetsInclude: ["**/*.JPG"],
+  },
   runtimeConfig: {
     currencyKey: process.env.CURRENCY_API_KEY,
   },
